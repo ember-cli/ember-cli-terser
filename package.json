@@ -7,7 +7,10 @@
     "build": "ember build",
     "test": "ember test"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jkarsrud/ember-cli-uglify.git"
+  },
   "engines": {
     "node": ">= 0.10.0"
   },
