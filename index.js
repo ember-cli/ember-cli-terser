@@ -9,7 +9,7 @@ module.exports = {
     this.options = app.options;
   },
   postprocessTree: function(type, tree) {
-    if(this.options.minifyJS.enabled === true) {
+    if(this.options.minifyJS.enabled === true && type === 'all') {
       var options = this.options.minifyJS.options || {};
       options.sourceMapConfig = this.options.sourcemaps;
       return require('broccoli-uglify-sourcemap')(tree, options);
