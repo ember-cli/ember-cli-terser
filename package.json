@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jkarsrud/ember-cli-uglify.git"
+    "url": "https://github.com/ember-cli/ember-cli-uglify.git"
   },
   "engines": {
     "node": ">= 0.10.0"
