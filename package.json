@@ -23,6 +23,6 @@
     "before": "broccoli-asset-rev"
   },
   "dependencies": {
-    "broccoli-uglify-sourcemap": "^1.0.0"
+    "broccoli-uglify-sourcemap": "^1.4.2"
   }
 }
