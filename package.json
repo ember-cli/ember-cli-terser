@@ -12,7 +12,7 @@
     "url": "https://github.com/ember-cli/ember-cli-uglify.git"
   },
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 0.12"
   },
   "author": "",
   "license": "MIT",
