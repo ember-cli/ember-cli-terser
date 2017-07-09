@@ -23,6 +23,7 @@
     "before": "broccoli-asset-rev"
   },
   "dependencies": {
-    "broccoli-uglify-sourcemap": "^1.0.0"
+    "broccoli-uglify-sourcemap": "^2.0.0-beta.1",
+    "lodash.defaultsdeep": "^4.6.0"
   }
 }
