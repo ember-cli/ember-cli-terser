@@ -3,8 +3,8 @@
 module.exports = {
   name: 'ember-cli-uglify',
 
-  included: function(app) {
-    this._super.included.apply(this,arguments);
+  included(app) {
+    this._super.included.apply(this, arguments);
 
     const defaults = require('lodash.defaultsdeep');
 
@@ -45,7 +45,7 @@ module.exports = {
     return true;
   },
 
-  postprocessTree: function(type, tree) {
+  postprocessTree(type, tree) {
     if (this._options.enabled === true && type === 'all') {
       return require('broccoli-uglify-sourcemap')(tree, this._options);
     } else {
