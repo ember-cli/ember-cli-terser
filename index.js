@@ -18,6 +18,9 @@ module.exports = {
           // limit sequences because of memory issues during parsing
           sequences: 30,
         },
+        mangle: {
+          safari10: true
+        },
         output: {
           // no difference in size and much easier to debug
           semicolons: false,
