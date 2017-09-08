@@ -1,3 +1,11 @@
+## v2.0.0-beta.2 (2017-09-08)
+
+#### :bug: Bug Fix
+* [#26](https://github.com/ember-cli/ember-cli-uglify/pull/26) Add a fix for Safari to the default config. ([@jrjohnson](https://github.com/jrjohnson))
+
+#### Committers: 1
+- Jonathan Johnson ([jrjohnson](https://github.com/jrjohnson))
+
 ## v2.0.0-beta.1 (2017-07-10)
 
 #### :boom: Breaking Change
