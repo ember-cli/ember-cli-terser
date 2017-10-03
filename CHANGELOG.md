@@ -1,3 +1,12 @@
+## v2.0.0 (2017-10-03)
+
+#### :rocket: Enhancement
+* [#28](https://github.com/ember-cli/ember-cli-uglify/pull/28) Update "broccoli-uglify-sourcemap" to v2.0.0. ([@Turbo87](https://github.com/Turbo87))
+
+#### Committers: 1
+- Tobias Bieniek ([Turbo87](https://github.com/Turbo87))
+
+
 ## v2.0.0-beta.2 (2017-09-08)
 
 #### :bug: Bug Fix
