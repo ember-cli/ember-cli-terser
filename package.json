@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-uglify",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "JavaScript minification for Ember-CLI",
   "keywords": [
     "ember-addon"
@@ -21,7 +21,7 @@
     "test": "ember test"
   },
   "dependencies": {
-    "broccoli-uglify-sourcemap": "^2.0.0",
+    "broccoli-uglify-sourcemap": "^2.0.1",
     "lodash.defaultsdeep": "^4.6.0"
   },
   "engines": {

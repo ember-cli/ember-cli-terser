@@ -1,3 +1,11 @@
+## v2.0.1 (2018-01-22)
+
+#### :rocket: Enhancement
+* [#29](https://github.com/ember-cli/ember-cli-uglify/pull/29) Update "broccoli-uglify-sourcemap" to v2.0.1. ([@Duder-onomy](https://github.com/Duder-onomy))
+
+#### Committers: 1
+- Greg Larrenaga ([Duder-onomy](https://github.com/duder-onomy))
+
 ## v2.0.0 (2017-10-03)
 
 #### :rocket: Enhancement
