@@ -4,6 +4,7 @@ ember-cli-uglify
 
 [![npm](https://img.shields.io/npm/v/ember-cli-uglify.svg)](https://www.npmjs.com/package/ember-cli-uglify)
 [![Build Status](https://travis-ci.org/ember-cli/ember-cli-uglify.svg?branch=master)](https://travis-ci.org/ember-cli/ember-cli-uglify)
+[![Build status](https://ci.appveyor.com/api/projects/status/xbx40pk5b4ykawjh/branch/master?svg=true)](https://ci.appveyor.com/project/embercli/ember-cli-uglify/branch/master)
 
 [UglifyJS](https://github.com/mishoo/UglifyJS2) for [Ember.js](http://emberjs.com/).
 
