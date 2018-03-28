@@ -10,6 +10,7 @@ module.exports = {
 
     let defaultOptions = {
       enabled: app.env === 'production',
+      async: true, // run uglify in parallel
 
       uglify: {
         compress: {
