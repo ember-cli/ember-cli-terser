@@ -49,7 +49,7 @@
     "ember-cli-uglfiy": "./",
     "ember-load-initializers": "^1.0.0",
     "ember-resolver": "^4.5.0",
-    "ember-source": "^3.0.0",
+    "ember-source": "^3.4.5",
     "ember-try": "^0.2.23",
     "loader.js": "^4.6.0"
   }
