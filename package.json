@@ -51,6 +51,6 @@
     "ember-resolver": "^4.5.0",
     "ember-source": "^3.5.0",
     "ember-try": "^0.2.23",
-    "loader.js": "^4.6.0"
+    "loader.js": "^4.7.0"
   }
 }
