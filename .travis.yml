@@ -8,6 +8,12 @@ node_js:
 sudo: false
 dist: trusty
 
+branches:
+  only:
+    - master
+    # npm version tags
+    - /^v\d+\.\d+\.\d+/
+
 addons:
   chrome: stable
 

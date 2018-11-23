@@ -9,8 +9,6 @@ environment:
 branches:
   only:
     - master
-    - beta
-    - release
 
 # Install scripts. (runs after repo cloning)
 install:
