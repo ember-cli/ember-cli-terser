@@ -1919,12 +1919,6 @@ ember-cli-test-loader@^2.2.0:
   dependencies:
     ember-cli-babel "^6.8.1"
 
-ember-cli-uglfiy@./:
-  version "2.1.0"
-  dependencies:
-    broccoli-uglify-sourcemap "^2.2.0"
-    lodash.defaultsdeep "^4.6.0"
-
 ember-cli-valid-component-name@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/ember-cli-valid-component-name/-/ember-cli-valid-component-name-1.0.0.tgz#71550ce387e0233065f30b30b1510aa2dfbe87ef"
