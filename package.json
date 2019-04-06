@@ -26,7 +26,7 @@
     "lodash.defaultsdeep": "^4.6.0"
   },
   "engines": {
-    "node": "6.* || 8.* || >= 10.*"
+    "node": "8.* || >= 10.*"
   },
   "changelog": {
     "repo": "ember-cli/ember-cli-uglify",
