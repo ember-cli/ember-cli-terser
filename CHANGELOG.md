@@ -1,10 +1,43 @@
-## v2.0.1 (2018-01-22)
+# Changelog
+
+## v3.0.0 (2019-04-12)
+
+#### :boom: Breaking Change
+* [#102](https://github.com/ember-cli/ember-cli-uglify/pull/102) Drop support for Node.js 6 ([@Turbo87](https://github.com/Turbo87))
+* [#64](https://github.com/ember-cli/ember-cli-uglify/pull/64) Drop support for Node.js 4 ([@Turbo87](https://github.com/Turbo87))
+
+#### :house: Internal
+* [#68](https://github.com/ember-cli/ember-cli-uglify/pull/68) TravisCI: Remove deprecated `sudo: false` option ([@Turbo87](https://github.com/Turbo87))
+* [#67](https://github.com/ember-cli/ember-cli-uglify/pull/67) Remove unneeded and confusing dependency ([@jelhan](https://github.com/jelhan))
+* [#66](https://github.com/ember-cli/ember-cli-uglify/pull/66) CI: Run only for `master` branch, tags and PRs ([@Turbo87](https://github.com/Turbo87))
+* [#44](https://github.com/ember-cli/ember-cli-uglify/pull/44) Fix CI ([@Turbo87](https://github.com/Turbo87))
+
+#### Committers: 2
+- Tobias Bieniek ([@Turbo87](https://github.com/Turbo87))
+- jelhan ([@jelhan](https://github.com/jelhan))
+
+
+## v2.1.0 (2018-03-27)
 
 #### :rocket: Enhancement
-* [#29](https://github.com/ember-cli/ember-cli-uglify/pull/29) Update "broccoli-uglify-sourcemap" to v2.0.1. ([@Duder-onomy](https://github.com/Duder-onomy))
+* [#37](https://github.com/ember-cli/ember-cli-uglify/pull/37) Run uglify in parallel ([@mikrostew](https://github.com/mikrostew))
 
 #### Committers: 1
-- Greg Larrenaga ([Duder-onomy](https://github.com/duder-onomy))
+- Michael Stewart ([@mikrostew](https://github.com/mikrostew))
+
+
+## v2.0.2 (2018-02-20)
+
+#### :rocket: Enhancement
+* [#34](https://github.com/ember-cli/ember-cli-uglify/pull/34) Updates broccoli-uglify-sourcemap to version 2.0.1 ([@Duder-onomy](https://github.com/Duder-onomy))
+
+#### :house: Internal
+* [#36](https://github.com/ember-cli/ember-cli-uglify/pull/36) add test (basically, a default app built’s tests run even post uglifi… ([@stefanpenner](https://github.com/stefanpenner))
+
+#### Committers: 2
+- Greg Larrenaga ([@Duder-onomy](https://github.com/Duder-onomy))
+- Stefan Penner ([@stefanpenner](https://github.com/stefanpenner))
+
 
 ## v2.0.0 (2017-10-03)
 
