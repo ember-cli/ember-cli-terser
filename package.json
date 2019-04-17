@@ -22,7 +22,7 @@
     "test:all": "ember try:each -- ember test -e production"
   },
   "dependencies": {
-    "broccoli-uglify-sourcemap": "^3.1.0",
+    "broccoli-uglify-sourcemap": "^3.1.1",
     "lodash.defaultsdeep": "^4.6.0"
   },
   "engines": {
