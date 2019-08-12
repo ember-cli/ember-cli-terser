@@ -47,7 +47,7 @@
     "ember-cli-htmlbars": "^3.1.0",
     "ember-cli-qunit": "^4.4.0",
     "ember-load-initializers": "^2.0.0",
-    "ember-resolver": "^5.2.0",
+    "ember-resolver": "^5.2.1",
     "ember-source": "^3.12.0",
     "ember-try": "^1.2.1",
     "loader.js": "^4.7.0"
