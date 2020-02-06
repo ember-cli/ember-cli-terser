@@ -28,7 +28,7 @@
     invariant "^2.2.4"
     semver "^5.5.0"
 
-"@babel/core@^7.3.4", "@babel/core@^7.4.3", "@babel/core@^7.8.3":
+"@babel/core@^7.3.4", "@babel/core@^7.4.3", "@babel/core@^7.8.3", "@babel/core@^7.8.4":
   version "7.8.4"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.8.4.tgz#d496799e5c12195b3602d0fddd77294e3e38e80e"
   dependencies:
@@ -423,6 +423,12 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
 
+"@babel/plugin-syntax-typescript@^7.8.3":
+  version "7.8.3"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-typescript/-/plugin-syntax-typescript-7.8.3.tgz#c1f659dda97711a569cef75275f7e15dcaa6cabc"
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.8.3"
+
 "@babel/plugin-transform-arrow-functions@^7.8.3":
   version "7.8.3"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-arrow-functions/-/plugin-transform-arrow-functions-7.8.3.tgz#82776c2ed0cd9e1a49956daeb896024c9473b8b6"
@@ -645,6 +651,14 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.8.3"
 
+"@babel/plugin-transform-typescript@^7.8.3":
+  version "7.8.3"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-typescript/-/plugin-transform-typescript-7.8.3.tgz#be6f01a7ef423be68e65ace1f04fc407e6d88917"
+  dependencies:
+    "@babel/helper-create-class-features-plugin" "^7.8.3"
+    "@babel/helper-plugin-utils" "^7.8.3"
+    "@babel/plugin-syntax-typescript" "^7.8.3"
+
 "@babel/plugin-transform-typescript@~7.4.0":
   version "7.4.5"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-typescript/-/plugin-transform-typescript-7.4.5.tgz#ab3351ba35307b79981993536c93ff8be050ba28"
@@ -666,7 +680,7 @@
     core-js "^2.6.5"
     regenerator-runtime "^0.13.2"
 
-"@babel/preset-env@^7.8.3":
+"@babel/preset-env@^7.8.4":
   version "7.8.4"
   resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.8.4.tgz#9dac6df5f423015d3d49b6e9e5fa3413e4a72c4e"
   dependencies:
@@ -728,7 +742,7 @@
     levenary "^1.1.1"
     semver "^5.5.0"
 
-"@babel/runtime@^7.8.3":
+"@babel/runtime@^7.8.4":
   version "7.8.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.8.4.tgz#d79f5a2040f7caa24d53e563aad49cbc05581308"
   dependencies:
@@ -825,6 +839,10 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@ember-data/rfc395-data@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@ember-data/rfc395-data/-/rfc395-data-0.0.4.tgz#ecb86efdf5d7733a76ff14ea651a1b0ed1f8a843"
+
 "@ember/edition-utils@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@ember/edition-utils/-/edition-utils-1.2.0.tgz#a039f542dc14c8e8299c81cd5abba95e2459cfa6"
@@ -852,9 +870,38 @@
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
 
-"@types/minimatch@^3.0.3":
+"@types/events@*":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@types/events/-/events-3.0.0.tgz#2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7"
+
+"@types/fs-extra@^5.0.5":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@types/fs-extra/-/fs-extra-5.1.0.tgz#2a325ef97901504a3828718c390d34b8426a10a1"
+  dependencies:
+    "@types/node" "*"
+
+"@types/glob@*":
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/@types/glob/-/glob-7.1.1.tgz#aa59a1c6e3fbc421e07ccd31a944c30eba521575"
+  dependencies:
+    "@types/events" "*"
+    "@types/minimatch" "*"
+    "@types/node" "*"
+
+"@types/minimatch@*", "@types/minimatch@^3.0.3":
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
+
+"@types/node@*":
+  version "13.7.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.7.0.tgz#b417deda18cf8400f278733499ad5547ed1abec4"
+
+"@types/rimraf@^2.0.2":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@types/rimraf/-/rimraf-2.0.3.tgz#0199a46af106729ba14213fda7b981278d8c84f2"
+  dependencies:
+    "@types/glob" "*"
+    "@types/node" "*"
 
 "@types/symlink-or-copy@^1.2.0":
   version "1.2.0"
@@ -1247,6 +1294,12 @@ babel-plugin-dynamic-import-node@^2.3.0:
   resolved "https://registry.yarnpkg.com/babel-plugin-dynamic-import-node/-/babel-plugin-dynamic-import-node-2.3.0.tgz#f00f507bdaa3c3e3ff6e7e5e98d90a7acab96f7f"
   dependencies:
     object.assign "^4.1.0"
+
+babel-plugin-ember-data-packages-polyfill@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-ember-data-packages-polyfill/-/babel-plugin-ember-data-packages-polyfill-0.1.1.tgz#428217228bedb95215bcaac6da83f59488b40edd"
+  dependencies:
+    "@ember-data/rfc395-data" "^0.0.4"
 
 babel-plugin-ember-modules-api-polyfill@^2.12.0, babel-plugin-ember-modules-api-polyfill@^2.6.0:
   version "2.12.0"
@@ -2671,20 +2724,23 @@ ember-cli-babel@^6.11.0, ember-cli-babel@^6.12.0, ember-cli-babel@^6.16.0, ember
     ember-cli-version-checker "^2.1.2"
     semver "^5.5.0"
 
-ember-cli-babel@^7.11.0, ember-cli-babel@^7.14.1:
-  version "7.14.1"
-  resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-7.14.1.tgz#b34045449c4e7a22072757f394c89d585c1322e3"
+ember-cli-babel@^7.11.0, ember-cli-babel@^7.17.1:
+  version "7.17.1"
+  resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-7.17.1.tgz#96a4a527409b9555e329adea846f1f40eb4131c2"
   dependencies:
-    "@babel/core" "^7.8.3"
+    "@babel/core" "^7.8.4"
+    "@babel/helper-compilation-targets" "^7.8.4"
     "@babel/plugin-proposal-class-properties" "^7.8.3"
     "@babel/plugin-proposal-decorators" "^7.8.3"
     "@babel/plugin-transform-modules-amd" "^7.8.3"
     "@babel/plugin-transform-runtime" "^7.8.3"
+    "@babel/plugin-transform-typescript" "^7.8.3"
     "@babel/polyfill" "^7.8.3"
-    "@babel/preset-env" "^7.8.3"
-    "@babel/runtime" "^7.8.3"
+    "@babel/preset-env" "^7.8.4"
+    "@babel/runtime" "^7.8.4"
     amd-name-resolver "^1.2.1"
     babel-plugin-debug-macros "^0.3.0"
+    babel-plugin-ember-data-packages-polyfill "^0.1.1"
     babel-plugin-ember-modules-api-polyfill "^2.12.0"
     babel-plugin-module-resolver "^3.1.1"
     broccoli-babel-transpiler "^7.4.0"
@@ -2693,8 +2749,10 @@ ember-cli-babel@^7.11.0, ember-cli-babel@^7.14.1:
     broccoli-source "^1.1.0"
     clone "^2.1.2"
     ember-cli-babel-plugin-helpers "^1.1.0"
-    ember-cli-version-checker "^2.1.2"
+    ember-cli-version-checker "^4.1.0"
     ensure-posix-path "^1.0.2"
+    fixturify-project "^1.10.0"
+    rimraf "^3.0.1"
     semver "^5.5.0"
 
 ember-cli-broccoli-sane-watcher@^3.0.0:
@@ -2814,6 +2872,14 @@ ember-cli-version-checker@^3.1.3:
   dependencies:
     resolve-package-path "^1.2.6"
     semver "^5.6.0"
+
+ember-cli-version-checker@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-version-checker/-/ember-cli-version-checker-4.1.0.tgz#7fc9836bdbc87451d286ba6a9a89b23591d8bbb7"
+  dependencies:
+    resolve-package-path "^2.0.0"
+    semver "^6.3.0"
+    silent-error "^1.1.1"
 
 ember-cli@~3.11.0:
   version "3.11.0"
@@ -3390,6 +3456,23 @@ fireworm@^0.7.0:
     lodash.debounce "^3.1.1"
     lodash.flatten "^3.0.2"
     minimatch "^3.0.2"
+
+fixturify-project@^1.10.0:
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/fixturify-project/-/fixturify-project-1.10.0.tgz#091c452a9bb15f09b6b9cc7cf5c0ad559f1d9aad"
+  dependencies:
+    fixturify "^1.2.0"
+    tmp "^0.0.33"
+
+fixturify@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/fixturify/-/fixturify-1.2.0.tgz#abe8c52dd27dbbfdb874a02893781c93425663ea"
+  dependencies:
+    "@types/fs-extra" "^5.0.5"
+    "@types/minimatch" "^3.0.3"
+    "@types/rimraf" "^2.0.2"
+    fs-extra "^7.0.1"
+    matcher-collection "^2.0.0"
 
 follow-redirects@^1.0.0:
   version "1.5.10"
@@ -5689,6 +5772,13 @@ resolve-package-path@^1.0.11, resolve-package-path@^1.2.6, resolve-package-path@
     path-root "^0.1.1"
     resolve "^1.10.0"
 
+resolve-package-path@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/resolve-package-path/-/resolve-package-path-2.0.0.tgz#7f258ab86ff074fff4ff8027a28f94d17d6fb1df"
+  dependencies:
+    path-root "^0.1.1"
+    resolve "^1.13.1"
+
 resolve-path@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/resolve-path/-/resolve-path-1.4.0.tgz#c4bda9f5efb2fce65247873ab36bb4d834fe16f7"
@@ -5712,6 +5802,12 @@ resolve@^1.10.0, resolve@^1.10.1, resolve@^1.11.1, resolve@^1.12.0, resolve@^1.3
   dependencies:
     path-parse "^1.0.6"
 
+resolve@^1.13.1:
+  version "1.15.1"
+  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.15.1.tgz#27bdcdeffeaf2d6244b95bb0f9f4b4653451f3e8"
+  dependencies:
+    path-parse "^1.0.6"
+
 responselike@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/responselike/-/responselike-1.0.2.tgz#918720ef3b631c5642be068f15ade5a46f4ba1e7"
@@ -5732,6 +5828,12 @@ ret@~0.1.10:
 rimraf@^2.2.8, rimraf@^2.3.4, rimraf@^2.4.3, rimraf@^2.4.4, rimraf@^2.5.3, rimraf@^2.5.4, rimraf@^2.6.1, rimraf@^2.6.2, rimraf@^2.6.3, rimraf@~2.6.2:
   version "2.6.3"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.3.tgz#b2d104fe0d8fb27cf9e0a1cda8262dd3833c6cab"
+  dependencies:
+    glob "^7.1.3"
+
+rimraf@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-3.0.1.tgz#48d3d4cb46c80d388ab26cd61b1b466ae9ae225a"
   dependencies:
     glob "^7.1.3"
 
