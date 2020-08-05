@@ -6,7 +6,8 @@ ember-cli-uglify
 [![Build Status](https://travis-ci.org/ember-cli/ember-cli-uglify.svg?branch=master)](https://travis-ci.org/ember-cli/ember-cli-uglify)
 [![Build status](https://ci.appveyor.com/api/projects/status/xbx40pk5b4ykawjh/branch/master?svg=true)](https://ci.appveyor.com/project/embercli/ember-cli-uglify/branch/master)
 
-[UglifyJS](https://github.com/mishoo/UglifyJS2) for [Ember.js](http://emberjs.com/).
+[terser](https://github.com/terser/terser) integration to 
+[ember-cli](http://cli.emberjs.com/) to uglify code.
 
 
 Installation
@@ -22,7 +23,7 @@ Usage
 After installing `ember-cli-uglify` it will automatically hook into the build
 pipeline and minify your JS files in production builds.
 
-If you want to customize how `ember-cli-uglify` is running UglifyJS under the
+If you want to customize how `ember-cli-uglify` is running terser under the
 hood you have several configuration options available:
 
 ```js
@@ -54,8 +55,8 @@ var app = new EmberApp({
 
 - `exclude?: string[]`: A list of paths or globs to exclude from minification
 
-- `uglify?: UglifyOptions`: A hash of [options](https://github.com/mishoo/UglifyJS2#minify-options)
-  that are passed directly to UglifyJS
+- `uglify?: UglifyOptions`: A hash of [options](https://github.com/terser/terser#minify-options)
+  that are passed directly to terser
 
 
 ### Source Maps
