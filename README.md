@@ -1,36 +1,35 @@
 
-ember-cli-uglify
+ember-cli-terser
 ==============================================================================
 
-[![npm](https://img.shields.io/npm/v/ember-cli-uglify.svg)](https://www.npmjs.com/package/ember-cli-uglify)
-[![Build Status](https://travis-ci.org/ember-cli/ember-cli-uglify.svg?branch=master)](https://travis-ci.org/ember-cli/ember-cli-uglify)
-[![Build status](https://ci.appveyor.com/api/projects/status/xbx40pk5b4ykawjh/branch/master?svg=true)](https://ci.appveyor.com/project/embercli/ember-cli-uglify/branch/master)
+[![npm](https://img.shields.io/npm/v/ember-cli-terser.svg)](https://www.npmjs.com/package/ember-cli-terser)
+[![Build Status](https://github.com/ember-cli/ember-cli-terser/workflows/CI/badge.svg)](https://github.com/ember-cli/ember-cli-terser/actions?query=workflow%3ACI)
 
 [terser](https://github.com/terser/terser) integration to 
-[ember-cli](http://cli.emberjs.com/) to uglify code.
+[ember-cli](http://cli.emberjs.com/) to minify your JavaScript.
 
 
 Installation
 ------------------------------------------------------------------------------
 
 ```
-ember install ember-cli-uglify
+ember install ember-cli-terser
 ```
 
 Usage
 ------------------------------------------------------------------------------
 
-After installing `ember-cli-uglify` it will automatically hook into the build
+After installing `ember-cli-terser` it will automatically hook into the build
 pipeline and minify your JS files in production builds.
 
-If you want to customize how `ember-cli-uglify` is running terser under the
+If you want to customize how `ember-cli-terser` is running terser under the
 hood you have several configuration options available:
 
 ```js
 // ember-cli-build.js
 
 var app = new EmberApp({
-  'ember-cli-uglify': {
+  'ember-cli-terser': {
     enabled: true,
 
     exclude: ['vendor.js'],
@@ -80,4 +79,4 @@ var app = new EmberApp({
 
 License
 ------------------------------------------------------------------------------
-ember-cli-uglify is licensed under the [MIT License](LICENSE.md).
+ember-cli-terser is licensed under the [MIT License](LICENSE.md).
