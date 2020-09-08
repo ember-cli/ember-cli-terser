@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-cli-uglify',
+  name: require('./package').name,
 
   included(app) {
     this._super.included.apply(this, arguments);
@@ -30,11 +30,12 @@ module.exports = {
       defaultOptions.terser.sourceMap = false;
     }
 
-    let addonOptions = app.options['ember-cli-uglify'] || {};
+    let addonOptions = app.options['ember-cli-terser'];
 
-    if ('uglify' in addonOptions) {
-      this.ui.writeWarnLine('[ember-cli-uglify] Passing uglify in options is deprecated, please update to passing `terser` instead.');
-      addonOptions = Object.assign({}, addonOptions, { terser: addonOptions.uglify, uglify: undefined });
+    if ('ember-cli-uglify' in app.options) {
+      this.ui.writeWarnLine('[ember-cli-terser] Passing options as `ember-cli-uglify` in `ember-cli-build.js` is deprecated, please update to passing `ember-cli-terser` (with a `terser` property) instead.');
+
+      addonOptions = Object.assign({}, app.options['ember-cli-uglify'], { terser: addonOptions.uglify, uglify: undefined });
     }
 
     this._terserOptions = Object.assign({}, defaultOptions, addonOptions);
