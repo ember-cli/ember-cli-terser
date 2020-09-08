@@ -1,3 +1,31 @@
+## v4.0.0 (2020-09-08)
+
+#### :boom: Breaking Change
+* [#229](https://github.com/ember-cli/ember-cli-terser/pull/229) Remove deep defaulting of minification options. ([@rwjblue](https://github.com/rwjblue))
+* [#224](https://github.com/ember-cli/ember-cli-terser/pull/224) Update to `terser@5` via `broccoli-uglify-sourcemap@4` ([@theenadayalank](https://github.com/theenadayalank))
+* [#219](https://github.com/ember-cli/ember-cli-terser/pull/219) Drop support for Node 8, 9, 11, and 13. ([@dcyriller](https://github.com/dcyriller))
+
+#### :rocket: Enhancement
+* [#230](https://github.com/ember-cli/ember-cli-terser/pull/230) Rename to ember-cli-terser. ([@rwjblue](https://github.com/rwjblue))
+* [#228](https://github.com/ember-cli/ember-cli-terser/pull/228) Migrate to broccoli-terser-sourcemap. ([@rwjblue](https://github.com/rwjblue))
+
+#### :memo: Documentation
+* [#218](https://github.com/ember-cli/ember-cli-terser/pull/218) Replace uglify-js mentions with terser ([@dcyriller](https://github.com/dcyriller))
+
+#### :house: Internal
+* [#231](https://github.com/ember-cli/ember-cli-terser/pull/231) Add automated release setup. ([@rwjblue](https://github.com/rwjblue))
+* [#227](https://github.com/ember-cli/ember-cli-terser/pull/227) Swap to GitHub Actions for CI ([@rwjblue](https://github.com/rwjblue))
+* [#226](https://github.com/ember-cli/ember-cli-terser/pull/226) Remove unused test helpers. ([@rwjblue](https://github.com/rwjblue))
+* [#106](https://github.com/ember-cli/ember-cli-terser/pull/106) .npmignore: Ignore `yarn.lock` file ([@Turbo87](https://github.com/Turbo87))
+
+#### Committers: 5
+- Cyrille David ([@dcyriller](https://github.com/dcyriller))
+- Robert Jackson ([@rwjblue](https://github.com/rwjblue))
+- Theenadayalan ([@theenadayalank](https://github.com/theenadayalank))
+- Tobias Bieniek ([@Turbo87](https://github.com/Turbo87))
+- [@dependabot-preview[bot]](https://github.com/apps/dependabot-preview)
+
+
 ## v3.0.0 (2019-04-12)
 
 #### :boom: Breaking Change
