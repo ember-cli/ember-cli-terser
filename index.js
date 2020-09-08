@@ -11,7 +11,7 @@ module.exports = {
     let defaultOptions = {
       enabled: app.env === 'production',
 
-      uglify: {
+      terser: {
         compress: {
           // this is adversely affects heuristics for IIFE eval
           'negate_iife': false,
@@ -29,10 +29,17 @@ module.exports = {
     };
 
     if (app.options.sourcemaps && !this._sourceMapsEnabled(app.options.sourcemaps)) {
-      defaultOptions.uglify.sourceMap = false;
+      defaultOptions.terser.sourceMap = false;
     }
 
-    this._options = defaults(app.options['ember-cli-uglify'] || {}, defaultOptions);
+    let addonOptions = app.options['ember-cli-uglify'] || {};
+
+    if ('uglify' in addonOptions) {
+      this.ui.writeWarnLine('[ember-cli-uglify] Passing uglify in options is deprecated, please update to passing `terser` instead.');
+      addonOptions = Object.assign({}, addonOptions, { terser: addonOptions.uglify, uglify: undefined });
+    }
+
+    this._terserOptions = defaults(addonOptions, defaultOptions);
   },
 
   _sourceMapsEnabled(options) {
@@ -49,9 +56,10 @@ module.exports = {
   },
 
   postprocessTree(type, tree) {
-    if (this._options.enabled === true && type === 'all') {
-      const Uglify = require('broccoli-uglify-sourcemap');
-      return new Uglify(tree, this._options);
+    if (this._terserOptions.enabled === true && type === 'all') {
+      const Terser = require('broccoli-terser-sourcemap');
+
+      return new Terser(tree, this._terserOptions);
     } else {
       return tree;
     }

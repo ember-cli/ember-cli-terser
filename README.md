@@ -35,7 +35,7 @@ var app = new EmberApp({
 
     exclude: ['vendor.js'],
 
-    uglify: {
+    terser: {
       compress: {
         sequences: 50,
       },
@@ -55,7 +55,7 @@ var app = new EmberApp({
 
 - `exclude?: string[]`: A list of paths or globs to exclude from minification
 
-- `uglify?: UglifyOptions`: A hash of [options](https://github.com/terser/terser#minify-options)
+- `terser?: TerserOptions`: A hash of [options](https://github.com/terser/terser#minify-options)
   that are passed directly to terser
 
 
