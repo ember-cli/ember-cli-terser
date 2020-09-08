@@ -1,5 +1,3 @@
-# Changelog
-
 ## v3.0.0 (2019-04-12)
 
 #### :boom: Breaking Change
