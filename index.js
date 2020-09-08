@@ -10,7 +10,6 @@ module.exports = {
 
     let defaultOptions = {
       enabled: app.env === 'production',
-      async: true, // run uglify in parallel
 
       uglify: {
         compress: {
@@ -51,7 +50,8 @@ module.exports = {
 
   postprocessTree(type, tree) {
     if (this._options.enabled === true && type === 'all') {
-      return require('broccoli-uglify-sourcemap')(tree, this._options);
+      const Uglify = require('broccoli-uglify-sourcemap');
+      return new Uglify(tree, this._options);
     } else {
       return tree;
     }
