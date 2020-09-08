@@ -6,8 +6,6 @@ module.exports = {
   included(app) {
     this._super.included.apply(this, arguments);
 
-    const defaults = require('lodash.defaultsdeep');
-
     let defaultOptions = {
       enabled: app.env === 'production',
 
@@ -39,7 +37,7 @@ module.exports = {
       addonOptions = Object.assign({}, addonOptions, { terser: addonOptions.uglify, uglify: undefined });
     }
 
-    this._terserOptions = defaults(addonOptions, defaultOptions);
+    this._terserOptions = Object.assign({}, defaultOptions, addonOptions);
   },
 
   _sourceMapsEnabled(options) {

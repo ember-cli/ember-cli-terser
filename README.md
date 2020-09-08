@@ -58,6 +58,7 @@ var app = new EmberApp({
 - `terser?: TerserOptions`: A hash of [options](https://github.com/terser/terser#minify-options)
   that are passed directly to terser
 
+If no `terser` option is passed, a default configuration will be used.
 
 ### Source Maps
 
