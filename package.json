@@ -21,7 +21,7 @@
     "test": "ember test -e production"
   },
   "dependencies": {
-    "broccoli-uglify-sourcemap": "^4.0.0",
+    "broccoli-terser-sourcemap": "^4.1.0",
     "lodash.defaultsdeep": "^4.6.1"
   },
   "engines": {
