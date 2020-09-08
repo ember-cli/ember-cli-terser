@@ -9,12 +9,12 @@
   "bugs": {
     "url": "https://github.com/ember-cli/ember-cli-terser/issues"
   },
-  "license": "MIT",
-  "author": "",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ember-cli/ember-cli-terser.git"
   },
+  "license": "MIT",
+  "author": "",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
@@ -23,8 +23,23 @@
   "dependencies": {
     "broccoli-terser-sourcemap": "^4.1.0"
   },
+  "devDependencies": {
+    "ember-cli": "~3.20.0",
+    "ember-cli-babel": "^7.22.1",
+    "ember-cli-htmlbars": "^4.2.3",
+    "ember-cli-qunit": "^4.4.0",
+    "ember-load-initializers": "^2.1.1",
+    "ember-resolver": "^8.0.2",
+    "ember-source": "^3.21.1",
+    "loader.js": "^4.7.0",
+    "release-it": "^14.0.2",
+    "release-it-lerna-changelog": "^2.4.0"
+  },
   "engines": {
     "node": "10.* || 12.* || >= 14"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   },
   "changelog": {
     "repo": "ember-cli/ember-cli-terser",
@@ -39,14 +54,19 @@
   "ember-addon": {
     "before": "broccoli-asset-rev"
   },
-  "devDependencies": {
-    "ember-cli": "~3.20.0",
-    "ember-cli-babel": "^7.22.1",
-    "ember-cli-htmlbars": "^4.2.3",
-    "ember-cli-qunit": "^4.4.0",
-    "ember-load-initializers": "^2.1.1",
-    "ember-resolver": "^8.0.2",
-    "ember-source": "^3.21.1",
-    "loader.js": "^4.7.0"
+  "release-it": {
+    "plugins": {
+      "release-it-lerna-changelog": {
+        "infile": "CHANGELOG.md",
+        "launchEditor": true
+      }
+    },
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true,
+      "tokenRef": "GITHUB_AUTH"
+    }
   }
 }
