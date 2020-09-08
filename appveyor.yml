@@ -25,7 +25,7 @@ cache:
 test_script:
   # Output useful info for debugging.
   - git rev-parse HEAD
-  - cmd: yarn run test:all
+  - cmd: yarn run test
 
 # Don't actually build.
 build: off
