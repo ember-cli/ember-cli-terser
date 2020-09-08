@@ -18,8 +18,7 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember test -e production",
-    "test:all": "ember try:each -- ember test -e production"
+    "test": "ember test -e production"
   },
   "dependencies": {
     "broccoli-uglify-sourcemap": "^4.0.0",
@@ -49,7 +48,6 @@
     "ember-load-initializers": "^2.1.1",
     "ember-resolver": "^8.0.2",
     "ember-source": "^3.21.1",
-    "ember-try": "^1.4.0",
     "loader.js": "^4.7.0"
   }
 }
