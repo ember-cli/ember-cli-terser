@@ -1,3 +1,13 @@
+## v4.0.1 (2020-10-23)
+
+#### :bug: Bug Fix
+* [#236](https://github.com/ember-cli/ember-cli-terser/pull/236) Fix upgraing from ember-cli-uglify options in ember-cli-build.js ([@rwjblue](https://github.com/rwjblue))
+
+#### Committers: 2
+- Robert Jackson ([@rwjblue](https://github.com/rwjblue))
+- [@dependabot-preview[bot]](https://github.com/apps/dependabot-preview)
+
+
 ## v4.0.0 (2020-09-08)
 
 #### :boom: Breaking Change
