@@ -28,7 +28,7 @@
     "ember-cli-babel": "^7.23.0",
     "ember-cli-htmlbars": "^5.3.1",
     "ember-cli-qunit": "^4.4.0",
-    "ember-load-initializers": "^2.1.1",
+    "ember-load-initializers": "^2.1.2",
     "ember-resolver": "^8.0.2",
     "ember-source": "^3.22.0",
     "loader.js": "^4.7.0",
