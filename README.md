@@ -42,6 +42,9 @@ var app = new EmberApp({
         semicolons: true,
       },
     },
+
+    // Tell broccoli-terser-sourcemap to not add sourcemap URLs
+    hiddenSourceMap: true,
   },
 });
 ```
@@ -58,6 +61,8 @@ var app = new EmberApp({
   that are passed directly to terser
 
 If no `terser` option is passed, a default configuration will be used.
+
+Options supported by [broccoli-terser-sourcemap](https://github.com/ember-cli/broccoli-terser-sourcemap) may be added as top-level fields.
 
 ### Source Maps
 
