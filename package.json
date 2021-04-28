@@ -52,6 +52,7 @@
     }
   },
   "ember-addon": {
+    "before": "ember-cli-sri",
     "after": "broccoli-asset-rev"
   },
   "release-it": {
