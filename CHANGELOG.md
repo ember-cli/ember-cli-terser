@@ -1,3 +1,17 @@
+## v4.0.2 (2021-04-28)
+
+#### :bug: Bug Fix
+* [#266](https://github.com/ember-cli/ember-cli-terser/pull/266) Move ember-cli-terser to run after broccoli-asset-rev (reduces sourcemapping issues in some contexts) ([@mike-engel](https://github.com/mike-engel))
+
+#### :memo: Documentation
+* [#247](https://github.com/ember-cli/ember-cli-terser/pull/247) Mention how to configure broccoli-terser-sourcemap options ([@jaswilli](https://github.com/jaswilli))
+
+#### Committers: 3
+- Jason Williams ([@jaswilli](https://github.com/jaswilli))
+- Mike Engel ([@mike-engel](https://github.com/mike-engel))
+- [@dependabot-preview[bot]](https://github.com/apps/dependabot-preview)
+
+
 ## v4.0.1 (2020-10-23)
 
 #### :bug: Bug Fix
