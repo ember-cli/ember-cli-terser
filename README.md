@@ -82,6 +82,12 @@ var app = new EmberApp({
 ```
 
 
+Contributing
+------------------------------------------------------------------------------
+
+See the [Contributing](CONTRIBUTING.md) guide for details.
+
+
 License
 ------------------------------------------------------------------------------
 ember-cli-terser is licensed under the [MIT License](LICENSE.md).
