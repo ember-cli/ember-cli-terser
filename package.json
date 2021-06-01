@@ -30,7 +30,7 @@
     "ember-cli-qunit": "^4.4.0",
     "ember-load-initializers": "^2.1.2",
     "ember-resolver": "^8.0.2",
-    "ember-source": "^3.26.1",
+    "ember-source": "^3.27.2",
     "loader.js": "^4.7.0",
     "release-it": "^14.6.1",
     "release-it-lerna-changelog": "^3.1.0"
