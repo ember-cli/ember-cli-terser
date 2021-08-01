@@ -32,7 +32,7 @@
     "ember-resolver": "^8.0.2",
     "ember-source": "^3.27.5",
     "loader.js": "^4.7.0",
-    "release-it": "^14.10.0",
+    "release-it": "^14.10.1",
     "release-it-lerna-changelog": "^3.1.0"
   },
   "engines": {
