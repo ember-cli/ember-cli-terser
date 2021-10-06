@@ -21,6 +21,14 @@
     "test": "ember test -e production"
   },
   "dependencies": {
+    "async-promise-queue": "^1.0.5",
+    "broccoli-plugin": "^4.0.7",
+    "debug": "^4.3.2",
+    "esbuild": "^0.13.4",
+    "lodash.defaultsdeep": "^4.6.1",
+    "symlink-or-copy": "^1.3.1",
+    "walk-sync": "^3.0.0",
+    "workerpool": "^6.1.5"
   },
   "devDependencies": {
     "ember-cli": "~3.22.0",
