@@ -23,7 +23,7 @@ module.exports = {
 
   postprocessTree(type, tree) {
     if (this._esbuildOptions.enabled === true && type === 'all') {
-      const ESBuildPlugin = require('./lib');
+      const ESBuildPlugin = require('./lib/broccoli');
 
       return new ESBuildPlugin(tree, this._esbuildOptions);
     } else {
