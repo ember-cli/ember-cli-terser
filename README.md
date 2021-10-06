@@ -13,7 +13,9 @@ Installation
 ------------------------------------------------------------------------------
 
 ```
-ember install ember-cli-terser
+yarn add --dev @nullvoxpopuli/ember-cli-esbuild
+# or
+npm install --save-dev @nullvoxpopuli/ember-cli-esbuild
 ```
 
 Usage
