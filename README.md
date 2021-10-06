@@ -5,7 +5,7 @@ ember-cli-terser
 [![npm](https://img.shields.io/npm/v/ember-cli-terser.svg)](https://www.npmjs.com/package/ember-cli-terser)
 [![Build Status](https://github.com/ember-cli/ember-cli-terser/workflows/CI/badge.svg)](https://github.com/ember-cli/ember-cli-terser/actions?query=workflow%3ACI)
 
-[terser](https://github.com/terser/terser) integration to 
+[terser](https://github.com/terser/terser) integration to
 [ember-cli](http://cli.emberjs.com/) to minify your JavaScript.
 
 
@@ -80,6 +80,18 @@ var app = new EmberApp({
   },
 });
 ```
+
+Contributing
+------------------------------------------------------------------------------
+
+Debugging this plugin can be done with
+```bash
+JOBS=1 NODE_OPTIONS="--inspect-brk" ember test -e production
+```
+and then visit `chrome://inspect` in Google Chrome.
+you'll want to place a `debugger` somewhere in the broccoli code
+(located at `./lib/broccoli`) so that execution pauses near the code you want
+to inspect.
 
 
 License
