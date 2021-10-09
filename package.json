@@ -7,9 +7,11 @@
       "tests/*"
     ],
     "scripts": {
+      "test": "npm-run-all --aggregate-output --parallel 'test:*'",
       "lint:fix": "npm-run-all --aggregate-output --parallel 'lint:*:fix'",
       "lint:ember-app:fix": "yarn workspace ember-app lint:fix",
-      "lint:esbuild:fix": "yarn workspace ember-cli-esbuild lint:fix"
+      "lint:esbuild:fix": "yarn workspace ember-cli-esbuild lint:fix",
+      "test:ember-app": "cd tests/ember-app && ./run-tests.sh"
     },
     "volta": {
       "node": "14.17.0",
