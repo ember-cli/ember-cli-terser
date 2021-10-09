@@ -5,13 +5,13 @@
   "keywords": [
     "ember-addon"
   ],
-  "homepage": "https://github.com/ember-cli/ember-cli-terser#readme",
+  "homepage": "https://github.com/nullvoxpopuli/ember-cli-esbuild#readme",
   "bugs": {
-    "url": "https://github.com/ember-cli/ember-cli-terser/issues"
+    "url": "https://github.com/nullvoxpopuli/ember-cli-esbuild/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ember-cli/ember-cli-terser.git"
+    "url": "git+https://github.com/nullvoxpopuli/ember-cli-esbuild.git"
   },
   "license": "MIT",
   "author": "",
@@ -49,7 +49,7 @@
     "registry": "https://registry.npmjs.org"
   },
   "changelog": {
-    "repo": "ember-cli/ember-cli-terser",
+    "repo": "nullvoxpopuli/ember-cli-esbuild",
     "labels": {
       "breaking": ":boom: Breaking Change",
       "enhancement": ":rocket: Enhancement",

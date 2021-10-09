@@ -1,9 +1,9 @@
 
-ember-cli-terser
+@nullvoxpopuli/ember-cli-esbuild
 ==============================================================================
 
-[![npm](https://img.shields.io/npm/v/ember-cli-terser.svg)](https://www.npmjs.com/package/ember-cli-terser)
-[![Build Status](https://github.com/ember-cli/ember-cli-terser/workflows/CI/badge.svg)](https://github.com/ember-cli/ember-cli-terser/actions?query=workflow%3ACI)
+[![npm](https://img.shields.io/npm/v/@nullvoxpopuli/ember-cli-esbuild.svg)](https://www.npmjs.com/package/@nullvoxpopuli/ember-cli-esbuild)
+[![Build Status](https://github.com/nullvoxpopuli/ember-cli-esbuild/workflows/CI/badge.svg)](https://github.com/nullvoxpopuli/ember-cli-esbuild/actions?query=workflow%3ACI)
 
 [terser](https://github.com/terser/terser) integration to
 [ember-cli](http://cli.emberjs.com/) to minify your JavaScript.
@@ -21,17 +21,17 @@ npm install --save-dev @nullvoxpopuli/ember-cli-esbuild
 Usage
 ------------------------------------------------------------------------------
 
-After installing `ember-cli-terser` it will automatically hook into the build
+After installing `ember-cli-esbuild` it will automatically hook into the build
 pipeline and minify your JS files in production builds.
 
-If you want to customize how `ember-cli-terser` is running terser under the
+If you want to customize how `ember-cli-esbuild` is running terser under the
 hood you have several configuration options available:
 
 ```js
 // ember-cli-build.js
 
 var app = new EmberApp({
-  'ember-cli-terser': {
+  'ember-cli-esbuild': {
     enabled: true,
 
     exclude: ['vendor.js'],
@@ -98,4 +98,4 @@ to inspect.
 
 License
 ------------------------------------------------------------------------------
-ember-cli-terser is licensed under the [MIT License](LICENSE.md).
+ember-cli-esbuild is licensed under the [MIT License](LICENSE.md).
