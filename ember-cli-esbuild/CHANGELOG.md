@@ -1,3 +1,10 @@
+# [4.2.0](https://github.com/nullvoxpopuli/ember-cli-esbuild/compare/v4.1.0...v4.2.0) (2021-10-09)
+
+
+### Features
+
+* add basic sourceMap support ([1adb322](https://github.com/nullvoxpopuli/ember-cli-esbuild/commit/1adb32237a1d4eb870654131d6b3c2c5e3a11564))
+
 # [4.1.0](https://github.com/nullvoxpopuli/ember-cli-esbuild/compare/v4.0.2...v4.1.0) (2021-10-09)
 
 
