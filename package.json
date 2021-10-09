@@ -38,9 +38,7 @@
     "ember-load-initializers": "^2.1.2",
     "ember-resolver": "^8.0.2",
     "ember-source": "^3.27.5",
-    "loader.js": "^4.7.0",
-    "release-it": "^14.10.1",
-    "release-it-lerna-changelog": "^3.1.0"
+    "loader.js": "^4.7.0"
   },
   "engines": {
     "node": "10.* || 12.* || >= 14"
@@ -48,33 +46,8 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
-  "changelog": {
-    "repo": "nullvoxpopuli/ember-cli-esbuild",
-    "labels": {
-      "breaking": ":boom: Breaking Change",
-      "enhancement": ":rocket: Enhancement",
-      "bug": ":bug: Bug Fix",
-      "documentation": ":memo: Documentation",
-      "internal": ":house: Internal"
-    }
-  },
   "ember-addon": {
     "before": "ember-cli-sri",
     "after": "broccoli-asset-rev"
-  },
-  "release-it": {
-    "plugins": {
-      "release-it-lerna-changelog": {
-        "infile": "CHANGELOG.md",
-        "launchEditor": true
-      }
-    },
-    "git": {
-      "tagName": "v${version}"
-    },
-    "github": {
-      "release": true,
-      "tokenRef": "GITHUB_AUTH"
-    }
   }
 }
