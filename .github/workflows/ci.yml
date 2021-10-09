@@ -33,3 +33,22 @@ jobs:
 
     - run: yarn install --frozen-lockfile
     - run: yarn test:ember-app
+
+  publish:
+    name: "Release"
+    runs-on: ubuntu-latest
+    if: "github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'"
+    needs: [build]
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - uses: volta-cli/action@v1
+      - run: yarn install
+
+      - name: Release
+        run: yarn semantic-release
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
