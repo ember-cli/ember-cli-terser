@@ -12,8 +12,9 @@ on:
 
 jobs:
   build:
-    name: "${{matrix.os }} - Node ${{ matrix.node }}"
+    name: "Ember App: ${{matrix.os }} - Node ${{ matrix.node }}"
     runs-on: "${{ matrix.os }}-latest"
+    if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
 
     strategy:
       matrix:
@@ -25,6 +26,10 @@ jobs:
     - uses: volta-cli/action@v1
       with:
         node-version: ${{ matrix.node }}
+    - uses: actions/cache@v2
+      with:
+        path: '**/node_modules'
+        key: ${{ runner.os }}-node-${{ matrix.node }}-modules-${{ hashFiles('**/yarn.lock') }}
 
     - run: yarn install --frozen-lockfile
-    - run: yarn test
+    - run: yarn test:ember-app
