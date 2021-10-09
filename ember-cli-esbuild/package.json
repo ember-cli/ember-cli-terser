@@ -33,7 +33,10 @@
     "workerpool": "^6.1.5"
   },
   "devDependencies": {
-    "@nullvoxpopuli/eslint-configs": "^1.5.1"
+    "@nullvoxpopuli/eslint-configs": "^1.5.1",
+    "@semantic-release/changelog": "^6.0.0",
+    "@semantic-release/git": "^10.0.0",
+    "semantic-release": "^18.0.0"
   },
   "engines": {
     "node": ">= 14"
@@ -47,6 +50,20 @@
   "ember-addon": {
     "before": "ember-cli-sri",
     "after": "broccoli-asset-rev"
+  },
+  "release": {
+    "branches": [
+      "main",
+      "master"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/github",
+      "@semantic-release/git"
+    ]
   },
   "volta": {
     "node": "14.17.0",
