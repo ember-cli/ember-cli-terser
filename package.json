@@ -31,6 +31,7 @@
     "workerpool": "^6.1.5"
   },
   "devDependencies": {
+    "@ember/optional-features": "^2.0.0",
     "ember-cli": "~3.22.0",
     "ember-cli-babel": "^7.26.6",
     "ember-cli-htmlbars": "^5.7.1",
@@ -41,7 +42,7 @@
     "loader.js": "^4.7.0"
   },
   "engines": {
-    "node": "10.* || 12.* || >= 14"
+    "node": ">= 14"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -49,5 +50,8 @@
   "ember-addon": {
     "before": "ember-cli-sri",
     "after": "broccoli-asset-rev"
+  },
+  "volta": {
+    "node": "14.18.0"
   }
 }

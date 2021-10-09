@@ -5,18 +5,21 @@
 [![npm](https://img.shields.io/npm/v/@nullvoxpopuli/ember-cli-esbuild.svg)](https://www.npmjs.com/package/@nullvoxpopuli/ember-cli-esbuild)
 [![Build Status](https://github.com/nullvoxpopuli/ember-cli-esbuild/workflows/CI/badge.svg)](https://github.com/nullvoxpopuli/ember-cli-esbuild/actions?query=workflow%3ACI)
 
-[terser](https://github.com/terser/terser) integration to
+[esbuild](https://esbuild.github.io) integration to
 [ember-cli](http://cli.emberjs.com/) to minify your JavaScript.
 
+Note that targeting ES5 is not supported.
 
 Installation
 ------------------------------------------------------------------------------
 
-```
-yarn add --dev @nullvoxpopuli/ember-cli-esbuild
-# or
-npm install --save-dev @nullvoxpopuli/ember-cli-esbuild
-```
+1. remove `ember-cli-terser` or `ember-cli-ugfily`
+2.
+    ```
+    yarn add --dev @nullvoxpopuli/ember-cli-esbuild
+    # or
+    npm install --save-dev @nullvoxpopuli/ember-cli-esbuild
+    ```
 
 Usage
 ------------------------------------------------------------------------------
