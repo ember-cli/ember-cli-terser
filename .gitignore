@@ -16,6 +16,7 @@ node_modules/
 npm-debug.log*
 yarn-error.log
 testem.log
+.eslintcache
 
 # ember-try
 .node_modules.ember-try/
