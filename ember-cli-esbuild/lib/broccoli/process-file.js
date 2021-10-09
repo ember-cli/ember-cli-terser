@@ -16,7 +16,7 @@ module.exports = async function processFile(
   _options
 ) {
   let src = await fs.readFile(inFile, 'utf-8');
-  let options = defaults({}, _options.esbuild);
+  let options = defaults({}, _options);
   let start = new Date();
 
   debug('[starting]: %s %dKB', relativePath, src.length / 1000);
