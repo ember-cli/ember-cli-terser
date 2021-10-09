@@ -8,12 +8,10 @@ module.exports = {
 
     let defaultOptions = {
       enabled: app.env === 'production',
-
-      esbuild: {},
     };
 
     if (app.options.sourcemaps && !areSourceMapsEnabled(app.options.sourcemaps)) {
-      defaultOptions.esbuild.sourceMap = false;
+      defaultOptions.sourceMap = false;
     }
 
     let addonOptions = app.options['ember-cli-esbuild'];

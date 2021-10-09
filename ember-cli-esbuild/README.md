@@ -38,18 +38,6 @@ var app = new EmberApp({
     enabled: true,
 
     exclude: ['vendor.js'],
-
-    terser: {
-      compress: {
-        sequences: 50,
-      },
-      output: {
-        semicolons: true,
-      },
-    },
-
-    // Tell broccoli-terser-sourcemap to not add sourcemap URLs
-    hiddenSourceMap: true,
   },
 });
 ```
@@ -62,12 +50,7 @@ var app = new EmberApp({
 
 - `exclude?: string[]`: A list of paths or globs to exclude from minification
 
-- `terser?: TerserOptions`: A hash of [options](https://github.com/terser/terser#minify-options)
-  that are passed directly to terser
-
-If no `terser` option is passed, a default configuration will be used.
-
-Options supported by [broccoli-terser-sourcemap](https://github.com/ember-cli/broccoli-terser-sourcemap) may be added as top-level fields.
+- `sourceMap`: the ESBuild sourcemap option. `false`, by default. Can be: `'linked'`, `'external'`, `'inline'`, `'both'`, or `false`. See [ESBuild's docs](https://esbuild.github.io/api/#sourcemap) for more info
 
 ### Source Maps
 

@@ -2,9 +2,20 @@
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
+const { SOURCEMAP } = process.env;
+
 module.exports = function (defaults) {
+  let options = {
+    'ember-cli-esbuild': {},
+  };
+
+  if (SOURCEMAP) {
+    options['ember-cli-esbuild'].sourceMap = SOURCEMAP;
+  }
+
   let app = new EmberApp(defaults, {
     // Add options here
+    ...options,
   });
 
   // Use `app.import` to add additional libraries to the generated
