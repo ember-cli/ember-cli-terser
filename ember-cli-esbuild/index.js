@@ -9,7 +9,7 @@ module.exports = {
     let defaultOptions = {
       enabled: app.env === 'production',
 
-      esbuild: {}
+      esbuild: {},
     };
 
     if (app.options.sourcemaps && !areSourceMapsEnabled(app.options.sourcemaps)) {
@@ -29,7 +29,7 @@ module.exports = {
     } else {
       return tree;
     }
-  }
+  },
 };
 
 function areSourceMapsEnabled(options) {
@@ -38,10 +38,10 @@ function areSourceMapsEnabled(options) {
   }
 
   let extensions = options.extensions || [];
+
   if (extensions.indexOf('js') === -1) {
     return false;
   }
 
   return true;
-
 }

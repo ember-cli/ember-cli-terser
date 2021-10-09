@@ -1,9 +1,9 @@
 'use strict';
 
 const fs = require('fs');
+const path = require('path');
 const walkSync = require('walk-sync');
 const Plugin = require('broccoli-plugin');
-const path = require('path');
 const defaults = require('lodash.defaultsdeep');
 const symlinkOrCopy = require('symlink-or-copy');
 const MatcherCollection = require('matcher-collection');
@@ -15,7 +15,7 @@ const processFile = require('./process-file');
 
 const silent = process.argv.indexOf('--silent') !== -1;
 
-const worker = queue.async.asyncify(doWork => doWork());
+const worker = queue.async.asyncify((doWork) => doWork());
 
 const MatchNothing = {
   match() {
@@ -39,7 +39,10 @@ module.exports = class ESBuildWriter extends Plugin {
       },
     });
 
-    this.concurrency = Number(process.env.JOBS) || this.options.concurrency || Math.max(require('os').cpus().length - 1, 1);
+    this.concurrency =
+      Number(process.env.JOBS) ||
+      this.options.concurrency ||
+      Math.max(require('os').cpus().length - 1, 1);
 
     // create a worker pool using an external worker script
     this.pool = workerpool.pool(path.join(__dirname, 'worker.js'), {
@@ -48,6 +51,7 @@ module.exports = class ESBuildWriter extends Plugin {
     });
 
     let exclude = this.options.exclude;
+
     if (Array.isArray(exclude)) {
       this.excludes = new MatcherCollection(exclude);
     } else {
@@ -58,11 +62,12 @@ module.exports = class ESBuildWriter extends Plugin {
   async build() {
     let pendingWork = [];
 
-    this.inputPaths.forEach(inputPath => {
-      walkSync(inputPath).forEach(relativePath => {
+    this.inputPaths.forEach((inputPath) => {
+      walkSync(inputPath).forEach((relativePath) => {
         if (relativePath.slice(-1) === '/') {
           return;
         }
+
         let inFile = path.join(inputPath, relativePath);
         let outFile = path.join(this.outputPath, relativePath);
 
@@ -70,7 +75,9 @@ module.exports = class ESBuildWriter extends Plugin {
 
         if (this._isJSExt(relativePath) && !this.excludes.match(relativePath)) {
           // wrap this in a function so it doesn't actually run yet, and can be throttled
-          let terserOperation = () => this.processFile(inFile, outFile, relativePath, this.outputPath);
+          let terserOperation = () =>
+            this.processFile(inFile, outFile, relativePath, this.outputPath);
+
           pendingWork.push(terserOperation);
         } else if (relativePath.slice(-4) === '.map') {
           if (this.excludes.match(`${relativePath.slice(0, -4)}.{js,mjs}`)) {
@@ -100,10 +107,20 @@ module.exports = class ESBuildWriter extends Plugin {
     // don't run this in the workerpool if concurrency is disabled (can set JOBS <= 1)
     if (this.concurrency > 1) {
       debug('running in workerpool, concurrency=%d', this.concurrency);
+
       // each of these arguments is a string, which can be sent to the worker process as-is
-      return this.pool.exec('processFileParallel', [inFile, outFile, relativePath, outDir, silent, this.options]);
+      return this.pool.exec('processFileParallel', [
+        inFile,
+        outFile,
+        relativePath,
+        outDir,
+        silent,
+        this.options,
+      ]);
     }
+
     debug('not running in workerpool');
+
     return processFile(inFile, outFile, relativePath, outDir, silent, this.options);
   }
 };
