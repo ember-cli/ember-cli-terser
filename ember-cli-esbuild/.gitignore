@@ -5,8 +5,8 @@
 /tmp
 
 # dependencies
-node_modules/
-/node_modules/
+/node_modules
+/bower_components
 
 # misc
 /.sass-cache
@@ -16,7 +16,6 @@ node_modules/
 npm-debug.log*
 yarn-error.log
 testem.log
-.eslintcache
 
 # ember-try
 .node_modules.ember-try/

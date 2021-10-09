@@ -1,25 +1,55 @@
 name: CI
 
 on:
-  push:
-    branches: [ master ]
   pull_request:
-    branches: [ master ]
+  push:
+    branches:
+      - main
+      - master
+  schedule:
+    - cron: "0 3 * * 0" # every Sunday at 3am
+
 
 jobs:
   build:
-    name: "${{matrix.os }} - Node ${{ matrix.node-version }}"
+    name: "Ember App: ${{matrix.os }} - Node ${{ matrix.node }}"
     runs-on: "${{ matrix.os }}-latest"
+    if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
 
     strategy:
       matrix:
-        node-version: [10, 12, 14]
+        node: [14, 16]
         os: [windows, ubuntu]
 
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
+    - uses: volta-cli/action@v1
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: ${{ matrix.node }}
+    - uses: actions/cache@v2
+      with:
+        path: '**/node_modules'
+        key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
     - run: yarn install --frozen-lockfile
-    - run: yarn test
+    - run: yarn test:ember-app
+
+  publish:
+    name: "Release"
+    runs-on: ubuntu-latest
+    if: "github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'"
+    needs: [build]
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - uses: volta-cli/action@v1
+      - run: yarn install
+
+      - name: Release
+        run: yarn semantic-release
+        working-directory: 'ember-cli-esbuild'
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

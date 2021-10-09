@@ -1,73 +1,27 @@
 {
-  "name": "ember-cli-terser",
-  "version": "4.0.2",
-  "description": "JavaScript minification for Ember-CLI",
-  "keywords": [
-    "ember-addon"
-  ],
-  "homepage": "https://github.com/ember-cli/ember-cli-terser#readme",
-  "bugs": {
-    "url": "https://github.com/ember-cli/ember-cli-terser/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ember-cli/ember-cli-terser.git"
-  },
-  "license": "MIT",
-  "author": "",
-  "scripts": {
-    "build": "ember build",
-    "start": "ember server",
-    "test": "ember test -e production"
-  },
-  "dependencies": {
-    "broccoli-terser-sourcemap": "^4.1.0"
-  },
-  "devDependencies": {
-    "ember-cli": "~3.22.0",
-    "ember-cli-babel": "^7.26.6",
-    "ember-cli-htmlbars": "^5.7.1",
-    "ember-cli-qunit": "^4.4.0",
-    "ember-load-initializers": "^2.1.2",
-    "ember-resolver": "^8.0.2",
-    "ember-source": "^3.27.5",
-    "loader.js": "^4.7.0",
-    "release-it": "^14.10.1",
-    "release-it-lerna-changelog": "^3.1.0"
-  },
-  "engines": {
-    "node": "10.* || 12.* || >= 14"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org"
-  },
-  "changelog": {
-    "repo": "ember-cli/ember-cli-terser",
-    "labels": {
-      "breaking": ":boom: Breaking Change",
-      "enhancement": ":rocket: Enhancement",
-      "bug": ":bug: Bug Fix",
-      "documentation": ":memo: Documentation",
-      "internal": ":house: Internal"
-    }
-  },
-  "ember-addon": {
-    "before": "ember-cli-sri",
-    "after": "broccoli-asset-rev"
-  },
-  "release-it": {
-    "plugins": {
-      "release-it-lerna-changelog": {
-        "infile": "CHANGELOG.md",
-        "launchEditor": true
-      }
+    "name": "ember-cli-esbuild",
+    "private": true,
+    "author": "NullVoxPopuli",
+    "workspaces": [
+      "ember-cli-esbuild",
+      "tests/*"
+    ],
+    "scripts": {
+      "test": "npm-run-all --aggregate-output --parallel 'test:*'",
+      "lint:fix": "npm-run-all --aggregate-output --parallel 'lint:*:fix'",
+      "lint:ember-app:fix": "yarn workspace ember-app lint:fix",
+      "lint:esbuild:fix": "yarn workspace ember-cli-esbuild lint:fix",
+      "test:ember-app": "cd tests/ember-app && ./run-tests.sh"
     },
-    "git": {
-      "tagName": "v${version}"
+    "volta": {
+      "node": "14.17.0",
+      "yarn": "1.22.11",
+      "npm": "7.24.1"
     },
-    "github": {
-      "release": true,
-      "tokenRef": "GITHUB_AUTH"
+    "devDependencies": {
+      "@commitlint/cli": "^13.2.0",
+      "@commitlint/config-conventional": "^13.2.0",  
+      "npm-run-all": "^4.1.5"
     }
   }
-}
+  
