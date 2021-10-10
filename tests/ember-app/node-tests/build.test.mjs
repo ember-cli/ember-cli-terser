@@ -7,7 +7,7 @@ import { globby, globbySync } from 'globby';
 
 import { jest, expect, beforeEach, test } from '@jest/globals';
 
-jest.setTimeout(20_000);
+jest.setTimeout(60_000);
 
 beforeEach(async () => {
   await del(['./dist']);
