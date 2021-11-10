@@ -5,7 +5,7 @@ monorepo for using ESBuild for minification in Ember.JS
 ## Install
 
 
-1. remove `ember-cli-terser` or `ember-cli-ugfily`
+1. remove `ember-cli-terser` or `ember-cli-uglify`
 2.
     ```
     yarn add --dev @nullvoxpopuli/ember-cli-esbuild
