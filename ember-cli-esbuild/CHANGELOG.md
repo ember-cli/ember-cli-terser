@@ -1,3 +1,16 @@
+# [5.0.0](https://github.com/nullvoxpopuli/ember-cli-esbuild/compare/v4.2.9...v5.0.0) (2021-11-10)
+
+
+### chore
+
+* rename package to ember-cli-esbuild-minifier ([662c1e1](https://github.com/nullvoxpopuli/ember-cli-esbuild/commit/662c1e1cbefc38566a967096237587193f35ff91))
+
+
+### BREAKING CHANGES
+
+*   @nullvoxpopuli/ember-cli-esbuild will no longer receive updates.
+  Instead, insteall ember-cli-esbuild-minifier
+
 ## [4.2.9](https://github.com/nullvoxpopuli/ember-cli-esbuild/compare/v4.2.8...v4.2.9) (2021-11-09)
 
 
