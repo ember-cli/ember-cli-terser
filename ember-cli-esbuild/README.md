@@ -1,8 +1,8 @@
 
-@nullvoxpopuli/ember-cli-esbuild
+ember-cli-esbuild-minifier
 ==============================================================================
 
-[![npm](https://img.shields.io/npm/v/@nullvoxpopuli/ember-cli-esbuild.svg)](https://www.npmjs.com/package/@nullvoxpopuli/ember-cli-esbuild)
+[![npm](https://img.shields.io/npm/v/ember-cli-esbuild-minifier.svg)](https://www.npmjs.com/package/ember-cli-esbuild-minifier)
 [![Build Status](https://github.com/nullvoxpopuli/ember-cli-esbuild/workflows/CI/badge.svg)](https://github.com/nullvoxpopuli/ember-cli-esbuild/actions?query=workflow%3ACI)
 
 [esbuild](https://esbuild.github.io) integration to
