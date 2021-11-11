@@ -1,11 +1,16 @@
 'use strict';
 
 import execa from 'execa';
-import fs from 'fs/promises';
+
+// fs/promises is not available in node 12
+// import fs from 'fs/promises';
+import { default as fsWithCallbacks } from 'fs';
 import del from 'del';
 import { globby, globbySync } from 'globby';
 
 import { jest, expect, beforeEach, test } from '@jest/globals';
+
+const fs = fsWithCallbacks.promises;
 
 jest.setTimeout(60_000);
 
