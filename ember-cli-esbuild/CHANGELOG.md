@@ -1,3 +1,10 @@
+# [5.1.0](https://github.com/nullvoxpopuli/ember-cli-esbuild/compare/v5.0.0...v5.1.0) (2021-11-11)
+
+
+### Features
+
+* support node 12 ([1914cca](https://github.com/nullvoxpopuli/ember-cli-esbuild/commit/1914cca1fa0fe2353d18a558bed43d5e3b19e5bf))
+
 # [5.0.0](https://github.com/nullvoxpopuli/ember-cli-esbuild/compare/v4.2.9...v5.0.0) (2021-11-10)
 
 
