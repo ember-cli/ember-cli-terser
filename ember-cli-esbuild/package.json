@@ -48,8 +48,10 @@
     "edition": "octane"
   },
   "ember-addon": {
-    "before": "ember-cli-sri",
-    "after": "broccoli-asset-rev"
+    "before": [
+      "ember-cli-sri",
+      "broccoli-asset-rev"
+    ]
   },
   "release": {
     "branches": [
