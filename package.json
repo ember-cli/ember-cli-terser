@@ -52,7 +52,7 @@
     }
   },
   "ember-addon": {
-    "after": "broccoli-asset-rev"
+    "before": "broccoli-asset-rev"
   },
   "release-it": {
     "plugins": {
