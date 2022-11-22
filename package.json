@@ -21,7 +21,8 @@
     "test": "ember test -e production"
   },
   "dependencies": {
-    "broccoli-terser-sourcemap": "^4.1.0"
+    "broccoli-terser-sourcemap": "^4.1.0",
+    "ember-cli-lodash-subset": "^2.0.1"
   },
   "devDependencies": {
     "ember-cli": "~3.22.0",
