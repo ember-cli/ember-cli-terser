@@ -2,14 +2,31 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
+  test:
+    name: "Test - Node v${{matrix.node-version}}"
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10, 12, 14]
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{matrix.node-version}}
+      - run: yarn install --frozen-lockfile
+      - run: yarn test:node
+
   build:
-    name: "${{matrix.os }} - Node ${{ matrix.node-version }}"
-    runs-on: "${{ matrix.os }}-latest"
+    name: "Build - Node v${{matrix.node-version}} - ${{matrix.os}}"
+    needs: [test]
+    runs-on: "${{matrix.os}}-latest"
 
     strategy:
       matrix:
@@ -17,9 +34,9 @@ jobs:
         os: [windows, ubuntu]
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: yarn install --frozen-lockfile
-    - run: yarn test
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{matrix.node-version}}
+      - run: yarn install --frozen-lockfile
+      - run: yarn test

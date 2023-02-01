@@ -18,12 +18,14 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember test -e production"
+    "test": "ember test --environment=production",
+    "test:node": "mocha node-tests"
   },
   "dependencies": {
     "broccoli-terser-sourcemap": "^4.1.0"
   },
   "devDependencies": {
+    "chai": "^4.3.7",
     "ember-cli": "~3.22.0",
     "ember-cli-babel": "^7.26.6",
     "ember-cli-htmlbars": "^5.7.1",
@@ -32,6 +34,7 @@
     "ember-resolver": "^8.0.2",
     "ember-source": "^3.27.5",
     "loader.js": "^4.7.0",
+    "mocha": "^8.4.0",
     "release-it": "^14.10.1",
     "release-it-lerna-changelog": "^3.1.0"
   },
@@ -69,5 +72,9 @@
       "release": true,
       "tokenRef": "GITHUB_AUTH"
     }
+  },
+  "volta": {
+    "node": "14.21.2",
+    "yarn": "1.22.19"
   }
 }
