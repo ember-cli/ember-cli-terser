@@ -16,6 +16,14 @@ Installation
 ember install ember-cli-terser
 ```
 
+Embroider
+------------------------------------------------------------------------------
+
+Note that, `ember-cli-terser` has no effect under 
+[Embroider](https://github.com/embroider-build/embroider), as Embroider 
+provides its own minification process based on terser. This means that, apps 
+using Embroider, can safely uninstall `ember-cli-terser`.
+
 Usage
 ------------------------------------------------------------------------------
 
