@@ -25,6 +25,7 @@
     "broccoli-terser-sourcemap": "^4.1.0"
   },
   "devDependencies": {
+    "@release-it-plugins/lerna-changelog": "^5.0.0",
     "chai": "^4.3.7",
     "ember-cli": "~3.22.0",
     "ember-cli-babel": "^7.26.6",
@@ -35,8 +36,7 @@
     "ember-source": "^3.27.5",
     "loader.js": "^4.7.0",
     "mocha": "^8.4.0",
-    "release-it": "^14.10.1",
-    "release-it-lerna-changelog": "^3.1.0"
+    "release-it": "^15.6.0"
   },
   "engines": {
     "node": "10.* || 12.* || >= 14"
@@ -44,23 +44,13 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
-  "changelog": {
-    "repo": "ember-cli/ember-cli-terser",
-    "labels": {
-      "breaking": ":boom: Breaking Change",
-      "enhancement": ":rocket: Enhancement",
-      "bug": ":bug: Bug Fix",
-      "documentation": ":memo: Documentation",
-      "internal": ":house: Internal"
-    }
-  },
   "ember-addon": {
     "before": "ember-cli-sri",
     "after": "broccoli-asset-rev"
   },
   "release-it": {
     "plugins": {
-      "release-it-lerna-changelog": {
+      "@release-it-plugins/lerna-changelog": {
         "infile": "CHANGELOG.md",
         "launchEditor": true
       }
@@ -71,6 +61,9 @@
     "github": {
       "release": true,
       "tokenRef": "GITHUB_AUTH"
+    },
+    "npm": {
+      "publish": false
     }
   },
   "volta": {
