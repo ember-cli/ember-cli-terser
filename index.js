@@ -6,30 +6,6 @@ module.exports = {
   included(app) {
     this._super.included.apply(this, arguments);
 
-    let defaultOptions = {
-      enabled: app.env === 'production',
-
-      terser: {
-        compress: {
-          // this is adversely affects heuristics for IIFE eval
-          'negate_iife': false,
-          // limit sequences because of memory issues during parsing
-          sequences: 30,
-        },
-        mangle: {
-          safari10: true
-        },
-        output: {
-          // no difference in size and much easier to debug
-          semicolons: false,
-        },
-      }
-    };
-
-    if (app.options.sourcemaps && !this._sourceMapsEnabled(app.options.sourcemaps)) {
-      defaultOptions.terser.sourceMap = false;
-    }
-
     let addonOptions = app.options['ember-cli-terser'];
 
     if ('ember-cli-uglify' in app.options) {
@@ -38,20 +14,13 @@ module.exports = {
       addonOptions = Object.assign({}, app.options['ember-cli-uglify'], { terser: app.options['ember-cli-uglify'].uglify, uglify: undefined });
     }
 
-    this._terserOptions = Object.assign({}, defaultOptions, addonOptions);
-  },
+    const { buildTerserOptions } = require('./lib/build-terser-options');
 
-  _sourceMapsEnabled(options) {
-    if (options.enabled === false) {
-      return false;
-    }
-
-    let extensions = options.extensions || [];
-    if (extensions.indexOf('js') === -1) {
-      return false;
-    }
-
-    return true;
+    this._terserOptions = buildTerserOptions({
+      appEnv: app.env,
+      appSourceMaps: app.options.sourcemaps,
+      userOptions: addonOptions,
+    });
   },
 
   postprocessTree(type, tree) {
